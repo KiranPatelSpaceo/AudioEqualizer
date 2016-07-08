@@ -79,6 +79,7 @@ class kEqualizerView: UIView {
     }
     func start() {
         self.hidden = false
+        self.timer.invalidate()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.35, target: self, selector: #selector(kEqualizerView.animation), userInfo: nil, repeats: true)
     }
     func animation() {

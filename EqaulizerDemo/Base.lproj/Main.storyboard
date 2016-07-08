@@ -18,25 +18,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-uG-UqF" customClass="kEqualizerView" customModule="EqaulizerDemo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="150" width="217" height="300"/>
+                                <rect key="frame" x="192" y="82" width="217" height="200"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="daJ-dc-qHt"/>
-                                    <constraint firstAttribute="width" constant="217" id="pnL-uo-Lft"/>
+                                    <constraint firstAttribute="height" constant="200" id="IpV-fh-IDF"/>
+                                    <constraint firstAttribute="width" constant="217" id="oUT-OY-WND"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94w-Fv-OLn" customClass="kEqualizerView" customModule="EqaulizerDemo" customModuleProvider="target">
+                                <rect key="frame" x="192" y="313" width="217" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4Sj-0F-PqU"/>
+                                    <constraint firstAttribute="width" constant="217" id="7w8-z9-N1i"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zux-LR-diy">
-                                <rect key="frame" x="277" y="150" width="34" height="30"/>
+                                <rect key="frame" x="276" y="38" width="48" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Start"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4k-8h-8sN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjC-lN-9Pj">
-                                <rect key="frame" x="278" y="420" width="32" height="30"/>
+                                <rect key="frame" x="278" y="521" width="46" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Stop"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="btnStopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLP-tA-8rw"/>
                                 </connections>
@@ -44,16 +58,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7b1-uG-UqF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Pm-gl-hiw"/>
-                            <constraint firstItem="AjC-lN-9Pj" firstAttribute="bottom" secondItem="7b1-uG-UqF" secondAttribute="bottom" id="4KX-1Q-673"/>
-                            <constraint firstItem="AjC-lN-9Pj" firstAttribute="centerX" secondItem="Zux-LR-diy" secondAttribute="centerX" id="AZM-Hq-37x"/>
-                            <constraint firstItem="7b1-uG-UqF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="I3h-Wx-B25"/>
-                            <constraint firstItem="Zux-LR-diy" firstAttribute="leading" secondItem="7b1-uG-UqF" secondAttribute="trailing" constant="40" id="TNp-mL-RqS"/>
-                            <constraint firstItem="Zux-LR-diy" firstAttribute="top" secondItem="7b1-uG-UqF" secondAttribute="top" id="Zef-Ni-8eB"/>
+                            <constraint firstItem="94w-Fv-OLn" firstAttribute="centerX" secondItem="7b1-uG-UqF" secondAttribute="centerX" id="1wi-Kq-sE8"/>
+                            <constraint firstItem="94w-Fv-OLn" firstAttribute="width" secondItem="7b1-uG-UqF" secondAttribute="width" id="9F3-rq-Exh"/>
+                            <constraint firstItem="7b1-uG-UqF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-118" id="FJB-JM-V6T"/>
+                            <constraint firstItem="94w-Fv-OLn" firstAttribute="height" secondItem="7b1-uG-UqF" secondAttribute="height" id="IK0-8e-5EV"/>
+                            <constraint firstItem="94w-Fv-OLn" firstAttribute="top" secondItem="7b1-uG-UqF" secondAttribute="bottom" constant="31" id="MnM-HM-wDh"/>
+                            <constraint firstItem="AjC-lN-9Pj" firstAttribute="top" secondItem="94w-Fv-OLn" secondAttribute="bottom" constant="8" id="Ze1-is-W1O"/>
+                            <constraint firstItem="AjC-lN-9Pj" firstAttribute="centerX" secondItem="94w-Fv-OLn" secondAttribute="centerX" id="gdA-Fj-v3g"/>
+                            <constraint firstItem="7b1-uG-UqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hp5-MB-NfH"/>
+                            <constraint firstItem="7b1-uG-UqF" firstAttribute="top" secondItem="Zux-LR-diy" secondAttribute="bottom" constant="8" id="n8i-Nj-5Qm"/>
+                            <constraint firstItem="Zux-LR-diy" firstAttribute="centerX" secondItem="7b1-uG-UqF" secondAttribute="centerX" id="u0v-0w-JLh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="viewEqualizer" destination="7b1-uG-UqF" id="CyB-kJ-KoU"/>
+                        <outlet property="viewEqualizerHorizontal" destination="94w-Fv-OLn" id="kFw-Ag-l2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
