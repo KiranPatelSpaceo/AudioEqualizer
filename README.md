@@ -5,12 +5,15 @@ AudioEqualizer in swift
    viewEqualizer.backgroundColor = UIColor.clearColor()
    
    // Set bar color
+   
    viewEqualizer.barColor = UIColor.purpleColor()
    
    // Set bar Backgorund color
+   
    viewEqualizer.barBGColor = UIColor.grayColor()
    
    // Set direction of equalizer
+   
    viewEqualizer.initWithDirection(Direction.leftToRight) // Direction.bottomToTop
    
    
