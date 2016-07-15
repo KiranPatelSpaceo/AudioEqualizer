@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     }
     @IBAction func btnStopPressed(sender: AnyObject) {
         viewEqualizer.stop()
+        viewEqualizerHorizontal.stop()
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
