@@ -12,6 +12,7 @@ enum Direction {
     case bottomToTop
 }
 class kEqualizerView: UIView {
+    
     var timer = NSTimer()
     var arryBar = NSArray()
     var numberOfBars : Int = 0
@@ -33,15 +34,21 @@ class kEqualizerView: UIView {
         let kPadding : Int = 8
         let arrayTemp  = NSMutableArray()
          if self.direction == Direction.leftToRight {
+            
             self.numberOfBars = Int(self.frame.height/CGFloat((widthOfBar+kPadding)))
+            
          }else{
+            
             self.numberOfBars = Int(self.frame.width/CGFloat((widthOfBar+kPadding)))
 
         }
         for i in 0 ... numberOfBars{
+            
             let xPos : CGFloat = CGFloat((i*widthOfBar)+(i*kPadding))
             let width : CGFloat = CGFloat(widthOfBar)
+            
             if self.direction == Direction.leftToRight {
+                
                 let imgViewBG : UIImageView = UIImageView.init(frame: CGRectMake(0, xPos,self.frame.width, width))
                 imgViewBG.backgroundColor = barBGColor
                 let imgView : UIImageView = UIImageView.init(frame: CGRectMake(0, xPos, 1, width))
@@ -51,7 +58,9 @@ class kEqualizerView: UIView {
                 imgViewBG.clipsToBounds = true
                 imgView.clipsToBounds = true
                 arrayTemp.addObject(imgView)
+                
             }else{
+                
                 let imgViewBG : UIImageView = UIImageView.init(frame: CGRectMake(xPos, 0,width, self.frame.height))
                 imgViewBG.backgroundColor = barBGColor
                 let imgView : UIImageView = UIImageView.init(frame: CGRectMake(xPos, 0, width, 1))
@@ -65,8 +74,11 @@ class kEqualizerView: UIView {
             
         }
         if self.direction == Direction.leftToRight {
+            
             self.barHeight = UInt32(self.frame.width)
+            
         }else{
+            
             self.barHeight = UInt32(self.frame.height)
              self.layer.transform = CATransform3DConcat(self.layer.transform, CATransform3DMakeRotation(CGFloat(M_PI), 1.0, 0.0, 0.0))
         }
@@ -75,15 +87,19 @@ class kEqualizerView: UIView {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(kEqualizerView.stop), name: "StopTimer", object: nil)
     }
     func stop() {
+        
         self.timer.invalidate()
     }
     func start() {
+        
         self.hidden = false
         self.timer.invalidate()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.35, target: self, selector: #selector(kEqualizerView.animation), userInfo: nil, repeats: true)
     }
     func animation() {
-        UIView.animateWithDuration(0.35) { 
+        
+        UIView.animateWithDuration(0.35) {
+            
             for  bar  in self.arryBar {
                 let barNew : UIImageView = bar as! UIImageView
                 var rect : CGRect = barNew.frame
